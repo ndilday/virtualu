@@ -1,0 +1,60 @@
+Filename: TECH.DOC
+
+------------------------
+Steps for Initialization
+------------------------
+
+PlayerSchool Class
+------------------
+-Get player inputs for initial game settings. Values are stored
+ in PlayerSchool.
+
+
+School Class
+------------
+-Read UMASTER1.DBF and UMASTER2.DBF to SchoolRes::db_school_array[]
+ using SchoolRec1 and SchoolRec2 as the header for reading.
+ Refer to the "Main" sheet in the "Master" Excel file.
+
+-Calculate a Distance value for all records in
+ SchoolRes::db_school_array[].
+ Refer to the "Indices" sheet in the "Initialization" Excel file.
+
+
+SchoolEx Class
+--------------
+-Get 10 records in db_school_array[] with the smallest distance values
+ and store their record number in db_school_array[] in school_ex_array[].
+
+-At this point, there will be 10 records in school_ex_array[] which
+ are linked to records in db_school_array[] with the smallest
+ distance values.
+
+-Calculate a set of new variables in school_ex_array[] based on
+ vars in db_school_array[].
+ Refer to the "Init Cond" sheet in the "Initialization" Excel file.
+
+-Calculate initial conditions for the player institution by
+ averaging school_ex_array[] and store the results in
+ schoolRes::player_school_ex.
+
+
+PeerSchool Class
+----------------
+-Calculate the distance of the player school.
+
+-Screen on distance and select all schools from db_school_array[]
+ with distances < distance of player school + C (a constant, its value
+ is 1) * std deviation. Create PeerSchool records of the screened
+ schools in SchoolRes::peer_school_array[].
+ Refer to the "Peer Inst" sheet in the "Initialization" Excel file 
+ for the vars in SchoolRes::peer_school_array[].
+
+-Create a PeerSchool in peer_school_array[] for the player's school.
+
+-Calculate performance indicators for the peer schools.
+
+-Sort the peer schools on prestige.
+
+
+

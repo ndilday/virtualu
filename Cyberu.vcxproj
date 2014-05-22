@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug</OutDir>
+    <IntDir>.\Debug</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>cc</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>./;matrix.src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;DEBUG;NO_MEM_CLASS;ADMIN;NO_AUTOSAVE;NO_CDCHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Cyberu.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Cyberu.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Cyberu.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>release\cc.exe</OutputFile>
+      <AdditionalDependencies>ddraw.lib;winmm.lib;dxguid.lib;dsound.lib;strmiids.lib;dplayx.lib;dinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.;matrix.src;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG;TEST_CHANCE;ADMIN;NO_CDCHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\Cyberu.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Cyberu.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <ResourceOutputFileName>.\debug\cc.res</ResourceOutputFileName>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Cyberu.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>cc.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dxerr.lib;ddraw.lib;dinput8.lib;winmm.lib;dxguid.lib;dsound.lib;strmiids.lib;dinput8.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Object Include="asm\crc.obj" />
+    <Object Include="asm\I_BAR.obj" />
+    <Object Include="asm\I_BRIGHT.obj" />
+    <Object Include="asm\I_CTRL.obj" />
+    <Object Include="asm\I_EFFECT.obj" />
+    <Object Include="asm\i_line.obj" />
+    <Object Include="asm\i_read.obj" />
+    <Object Include="asm\ib.obj" />
+    <Object Include="asm\ib_a.obj" />
+    <Object Include="asm\ib_ar.obj" />
+    <Object Include="asm\Ib_arm.obj" />
+    <Object Include="asm\ib_at.obj" />
+    <Object Include="asm\ib_atr.obj" />
+    <Object Include="asm\ib_atrd.obj" />
+    <Object Include="asm\ib_atrdm.obj" />
+    <Object Include="asm\Ib_atrm.obj" />
+    <Object Include="asm\ib_r.obj" />
+    <Object Include="asm\Ib_rm.obj" />
+    <Object Include="asm\ib_t.obj" />
+    <Object Include="asm\ib_tr.obj" />
+    <Object Include="asm\ib_trd.obj" />
+    <Object Include="asm\ib_trdm.obj" />
+    <Object Include="asm\Ib_trm.obj" />
+    <Object Include="asm\ic.obj" />
+    <Object Include="asm\Ij_tr.obj" />
+    <Object Include="Asm\IP_TD.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="matrix.src\Bandmat.cpp" />
+    <ClCompile Include="matrix.src\Cholesky.cpp" />
+    <ClCompile Include="matrix.src\Evalue.cpp" />
+    <ClCompile Include="matrix.src\Hholder.cpp" />
+    <ClCompile Include="matrix.src\Jacobi.cpp" />
+    <ClCompile Include="matrix.src\Myexcept.cpp" />
+    <ClCompile Include="matrix.src\Newmat1.cpp" />
+    <ClCompile Include="matrix.src\Newmat2.cpp" />
+    <ClCompile Include="matrix.src\Newmat3.cpp" />
+    <ClCompile Include="matrix.src\Newmat4.cpp" />
+    <ClCompile Include="matrix.src\Newmat5.cpp" />
+    <ClCompile Include="matrix.src\Newmat6.cpp" />
+    <ClCompile Include="matrix.src\Newmat7.cpp" />
+    <ClCompile Include="matrix.src\Newmat8.cpp" />
+    <ClCompile Include="matrix.src\Newmat9.cpp" />
+    <ClCompile Include="matrix.src\Newmatex.cpp" />
+    <ClCompile Include="matrix.src\Newmatnl.cpp" />
+    <ClCompile Include="matrix.src\Newmatrm.cpp" />
+    <ClCompile Include="matrix.src\OLinAlg.cpp" />
+    <ClCompile Include="matrix.src\Solution.cpp" />
+    <ClCompile Include="matrix.src\Sort.cpp" />
+    <ClCompile Include="matrix.src\Submat.cpp" />
+    <ClCompile Include="matrix.src\Svd.cpp" />
+    <ClCompile Include="Cc.cpp" />
+    <ClCompile Include="oadm_off.cpp" />
+    <ClCompile Include="Oathl_if.cpp" />
+    <ClCompile Include="Oathl_st.cpp" />
+    <ClCompile Include="Oaudio.cpp" />
+    <ClCompile Include="Obankrup.cpp" />
+    <ClCompile Include="Obar.cpp" />
+    <ClCompile Include="Obattle.cpp" />
+    <ClCompile Include="Obitmap.cpp" />
+    <ClCompile Include="Obitmapw.cpp" />
+    <ClCompile Include="Oblckbrd.cpp" />
+    <ClCompile Include="Oblob2.cpp" />
+    <ClCompile Include="Oblob2w.cpp" />
+    <ClCompile Include="Obndsldr.cpp" />
+    <ClCompile Include="Obox.cpp" />
+    <ClCompile Include="Obutton.cpp" />
+    <ClCompile Include="Ochance.cpp" />
+    <ClCompile Include="Ocoltbl.cpp" />
+    <ClCompile Include="Ocombuf.cpp" />
+    <ClCompile Include="Oconfig.cpp" />
+    <ClCompile Include="Ocour_if.cpp" />
+    <ClCompile Include="Ocourres.cpp" />
+    <ClCompile Include="Ocourse.cpp" />
+    <ClCompile Include="Ocoursea.cpp" />
+    <ClCompile Include="Ocrime.cpp" />
+    <ClCompile Include="Odate.cpp" />
+    <ClCompile Include="Odb.cpp" />
+    <ClCompile Include="Odebugx.cpp" />
+    <ClCompile Include="Odeftile.cpp" />
+    <ClCompile Include="Odepa_hi.cpp" />
+    <ClCompile Include="Odepa_pi.cpp" />
+    <ClCompile Include="Odept.cpp" />
+    <ClCompile Include="odept_gf.cpp" />
+    <ClCompile Include="Odept_if.cpp" />
+    <ClCompile Include="Odept_pi.cpp" />
+    <ClCompile Include="Odepta.cpp" />
+    <ClCompile Include="Odeptgen.cpp" />
+    <ClCompile Include="Odeptlst.cpp" />
+    <ClCompile Include="Odeptres.cpp" />
+    <ClCompile Include="Odeve_if.cpp" />
+    <ClCompile Include="odeve_st.cpp" />
+    <ClCompile Include="Odir.cpp" />
+    <ClCompile Include="Odynarr.cpp" />
+    <ClCompile Include="Odynarrb.cpp" />
+    <ClCompile Include="Oenro_st.cpp" />
+    <ClCompile Include="Oenroll.cpp" />
+    <ClCompile Include="Oenrolsl.cpp" />
+    <ClCompile Include="Oerror.cpp" />
+    <ClCompile Include="Ofac_rep.cpp" />
+    <ClCompile Include="Ofac_rs.cpp" />
+    <ClCompile Include="ofac_sum.cpp" />
+    <ClCompile Include="Ofaci_if.cpp" />
+    <ClCompile Include="ofaci_st.cpp" />
+    <ClCompile Include="Ofacu_pi.cpp" />
+    <ClCompile Include="Ofaculta.cpp" />
+    <ClCompile Include="OFaculty.cpp" />
+    <ClCompile Include="Ofacures.cpp" />
+    <ClCompile Include="Ofield.cpp" />
+    <ClCompile Include="Ofile.cpp" />
+    <ClCompile Include="Ofiletxt.cpp" />
+    <ClCompile Include="Ofin_day.cpp" />
+    <ClCompile Include="Ofin_new.cpp" />
+    <ClCompile Include="Ofin_rep.cpp" />
+    <ClCompile Include="Ofin_s3.cpp" />
+    <ClCompile Include="Ofinance.cpp" />
+    <ClCompile Include="Ofinscor.cpp" />
+    <ClCompile Include="OFirm.cpp" />
+    <ClCompile Include="OFirmA.cpp" />
+    <ClCompile Include="Ofirmdrw.cpp" />
+    <ClCompile Include="OFirmRes.cpp" />
+    <ClCompile Include="Ofont.cpp" />
+    <ClCompile Include="Ofphoto.cpp" />
+    <ClCompile Include="Ogam_if1.cpp" />
+    <ClCompile Include="Ogam_if2.cpp" />
+    <ClCompile Include="Ogame.cpp" />
+    <ClCompile Include="OgameOpt.cpp" />
+    <ClCompile Include="Ogameset.cpp" />
+    <ClCompile Include="Ogamestr.cpp" />
+    <ClCompile Include="Ogamhall.cpp" />
+    <ClCompile Include="Ogammain.cpp" />
+    <ClCompile Include="Ogcompon.cpp" />
+    <ClCompile Include="ogconfig.cpp" />
+    <ClCompile Include="Oget.cpp" />
+    <ClCompile Include="Ogeta.cpp" />
+    <ClCompile Include="Ogfile.cpp" />
+    <ClCompile Include="Ogfile2.cpp" />
+    <ClCompile Include="Ogfile3.cpp" />
+    <ClCompile Include="Ogfile4.cpp" />
+    <ClCompile Include="ogfile5.cpp" />
+    <ClCompile Include="Ogfilea.cpp" />
+    <ClCompile Include="OGrpAre2.cpp" />
+    <ClCompile Include="OGrpArea.cpp" />
+    <ClCompile Include="Ogrpdmth.cpp" />
+    <ClCompile Include="Ogrpdyr.cpp" />
+    <ClCompile Include="Ogrph_pm.cpp" />
+    <ClCompile Include="Ogrph_pt.cpp" />
+    <ClCompile Include="Ogrph_py.cpp" />
+    <ClCompile Include="Ogrphmth.cpp" />
+    <ClCompile Include="Ogrphtri.cpp" />
+    <ClCompile Include="Ogrphyr.cpp" />
+    <ClCompile Include="Ogrpnfm.cpp" />
+    <ClCompile Include="Ogrpnft.cpp" />
+    <ClCompile Include="Ogrpnfyr.cpp" />
+    <ClCompile Include="Ogset_if.cpp" />
+    <ClCompile Include="Ohelp.cpp" />
+    <ClCompile Include="Ohelp_if.cpp" />
+    <ClCompile Include="Oiface.cpp" />
+    <ClCompile Include="Oimgres.cpp" />
+    <ClCompile Include="Oinfo.cpp" />
+    <ClCompile Include="Oinfo2.cpp" />
+    <ClCompile Include="Oinve_if.cpp" />
+    <ClCompile Include="Oinve_st.cpp" />
+    <ClCompile Include="Oletter.cpp" />
+    <ClCompile Include="OLgText.cpp" />
+    <ClCompile Include="olib_st.cpp" />
+    <ClCompile Include="Olibt_if.cpp" />
+    <ClCompile Include="Olog.cpp" />
+    <ClCompile Include="Olosegam.cpp" />
+    <ClCompile Include="Omath.cpp" />
+    <ClCompile Include="Omatrix.cpp" />
+    <ClCompile Include="Omem.cpp" />
+    <ClCompile Include="Omisc.cpp" />
+    <ClCompile Include="Omiscrep.cpp" />
+    <ClCompile Include="Omorerpt.cpp" />
+    <ClCompile Include="Omouse.cpp" />
+    <ClCompile Include="Omousecr.cpp" />
+    <ClCompile Include="Omusic.cpp" />
+    <ClCompile Include="Onameres.cpp" />
+    <ClCompile Include="Onews.cpp" />
+    <ClCompile Include="Onewsadd.cpp" />
+    <ClCompile Include="Onewsmsg.cpp" />
+    <ClCompile Include="oopt.cpp" />
+    <ClCompile Include="Oopt1.cpp" />
+    <ClCompile Include="Oopt2.cpp" />
+    <ClCompile Include="Oopt3.cpp" />
+    <ClCompile Include="Oparking.cpp" />
+    <ClCompile Include="Opeersch.cpp" />
+    <ClCompile Include="Opiechrt.cpp" />
+    <ClCompile Include="Oplant.cpp" />
+    <ClCompile Include="Opower.cpp" />
+    <ClCompile Include="Oprint.cpp" />
+    <ClCompile Include="Oprtmen1.cpp" />
+    <ClCompile Include="Oprtmen2.cpp" />
+    <ClCompile Include="Oprtmen3.cpp" />
+    <ClCompile Include="Oprtmen4.cpp" />
+    <ClCompile Include="Oprtmen5.cpp" />
+    <ClCompile Include="Oprtmen6.cpp" />
+    <ClCompile Include="Oprtmen7.cpp" />
+    <ClCompile Include="Oprtmenu.cpp" />
+    <ClCompile Include="Opsch_gs.cpp" />
+    <ClCompile Include="Opsch_pi.cpp" />
+    <ClCompile Include="opsch_po.cpp" />
+    <ClCompile Include="Opsch_sc.cpp" />
+    <ClCompile Include="Opschool.cpp" />
+    <ClCompile Include="Opull.cpp" />
+    <ClCompile Include="oquadprg.cpp" />
+    <ClCompile Include="Oradio.cpp" />
+    <ClCompile Include="OradioV.cpp" />
+    <ClCompile Include="ORect.cpp" />
+    <ClCompile Include="ores.cpp" />
+    <ClCompile Include="Oresdb.cpp" />
+    <ClCompile Include="Orestxt.cpp" />
+    <ClCompile Include="Oresx.cpp" />
+    <ClCompile Include="Oretire.cpp" />
+    <ClCompile Include="Oroad.cpp" />
+    <ClCompile Include="Oscen_if.cpp" />
+    <ClCompile Include="Oschlex.cpp" />
+    <ClCompile Include="Oschlres.cpp" />
+    <ClCompile Include="Oschool.cpp" />
+    <ClCompile Include="Oscor_if.cpp" />
+    <ClCompile Include="Oscroll.cpp" />
+    <ClCompile Include="Ose.cpp" />
+    <ClCompile Include="Oseres.cpp" />
+    <ClCompile Include="Osfrmres.cpp" />
+    <ClCompile Include="Oslider.cpp" />
+    <ClCompile Include="Ospinner.cpp" />
+    <ClCompile Include="Osprite.cpp" />
+    <ClCompile Include="Ospritea.cpp" />
+    <ClCompile Include="Osprtres.cpp" />
+    <ClCompile Include="ostd_sum.cpp" />
+    <ClCompile Include="Ostr.cpp" />
+    <ClCompile Include="Ostud_pi.cpp" />
+    <ClCompile Include="Ostud_sc.cpp" />
+    <ClCompile Include="Ostudena.cpp" />
+    <ClCompile Include="OStudent.cpp" />
+    <ClCompile Include="Ostuo_st.cpp" />
+    <ClCompile Include="Osysdet.cpp" />
+    <ClCompile Include="Osysdisp.cpp" />
+    <ClCompile Include="Osysinit.cpp" />
+    <ClCompile Include="Osysmess.cpp" />
+    <ClCompile Include="Osysproc.cpp" />
+    <ClCompile Include="Otabmenu.cpp" />
+    <ClCompile Include="Otask.cpp" />
+    <ClCompile Include="Otaskadd.cpp" />
+    <ClCompile Include="Otaskend.cpp" />
+    <ClCompile Include="Otaskmsg.cpp" />
+    <ClCompile Include="Oterrain.cpp" />
+    <ClCompile Include="OText.cpp" />
+    <ClCompile Include="Otransl.cpp" />
+    <ClCompile Include="Otxtbox.cpp" />
+    <ClCompile Include="Otxtlist.cpp" />
+    <ClCompile Include="Ovalsldr.cpp" />
+    <ClCompile Include="Ovbrow98.cpp" />
+    <ClCompile Include="Ovbrowse.cpp" />
+    <ClCompile Include="Ovga.cpp" />
+    <ClCompile Include="Ovgabuf.cpp" />
+    <ClCompile Include="Ovgabuf2.cpp" />
+    <ClCompile Include="Ovgalock.cpp" />
+    <ClCompile Include="Ovideo.cpp" />
+    <ClCompile Include="Ovolume.cpp" />
+    <ClCompile Include="Ovqueue.cpp" />
+    <ClCompile Include="Oworld.cpp" />
+    <ClCompile Include="Oworld_m.cpp" />
+    <ClCompile Include="Oworld_z.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="matrix.src\Controlw.h" />
+    <ClInclude Include="matrix.src\Include.h" />
+    <ClInclude Include="matrix.src\Myexcept.h" />
+    <ClInclude Include="matrix.src\Newmat.h" />
+    <ClInclude Include="matrix.src\Newmatap.h" />
+    <ClInclude Include="matrix.src\Newmatio.h" />
+    <ClInclude Include="matrix.src\Newmatnl.h" />
+    <ClInclude Include="matrix.src\Newmatrc.h" />
+    <ClInclude Include="matrix.src\Newmatrm.h" />
+    <ClInclude Include="matrix.src\OLinAlg.h" />
+    <ClInclude Include="matrix.src\ONewmat.h" />
+    <ClInclude Include="matrix.src\Precisio.h" />
+    <ClInclude Include="matrix.src\Solution.h" />
+    <ClInclude Include="All.h" />
+    <ClInclude Include="Colcode.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Cu.h" />
+    <ClInclude Include="Gamedef.h" />
+    <ClInclude Include="Imgfun.h" />
+    <ClInclude Include="Key.h" />
+    <ClInclude Include="oadm_off.h" />
+    <ClInclude Include="Oathleti.h" />
+    <ClInclude Include="Oaudio.h" />
+    <ClInclude Include="Obankrup.h" />
+    <ClInclude Include="Obar.h" />
+    <ClInclude Include="Obattle.h" />
+    <ClInclude Include="Obitmap.h" />
+    <ClInclude Include="Obitmapw.h" />
+    <ClInclude Include="Oblckbrd.h" />
+    <ClInclude Include="Oblob2.h" />
+    <ClInclude Include="Oblob2w.h" />
+    <ClInclude Include="Obndsldr.h" />
+    <ClInclude Include="Obox.h" />
+    <ClInclude Include="Obutton.h" />
+    <ClInclude Include="Ochance.h" />
+    <ClInclude Include="Ocoltbl.h" />
+    <ClInclude Include="Ocombuf.h" />
+    <ClInclude Include="Oconfig.h" />
+    <ClInclude Include="Ocourres.h" />
+    <ClInclude Include="Ocourse.h" />
+    <ClInclude Include="Odate.h" />
+    <ClInclude Include="Odb.h" />
+    <ClInclude Include="Odebugx.h" />
+    <ClInclude Include="Odeftile.h" />
+    <ClInclude Include="Odept.h" />
+    <ClInclude Include="Odeptgen.h" />
+    <ClInclude Include="Odeptlst.h" />
+    <ClInclude Include="Odeptres.h" />
+    <ClInclude Include="Odevelop.h" />
+    <ClInclude Include="Odir.h" />
+    <ClInclude Include="Odynarr.h" />
+    <ClInclude Include="Odynarrb.h" />
+    <ClInclude Include="Oenroll.h" />
+    <ClInclude Include="Ofacilit.h" />
+    <ClInclude Include="Ofaculty.h" />
+    <ClInclude Include="Ofacures.h" />
+    <ClInclude Include="Ofield.h" />
+    <ClInclude Include="Ofile.h" />
+    <ClInclude Include="Ofiletxt.h" />
+    <ClInclude Include="Ofinanc2.h" />
+    <ClInclude Include="Ofinance.h" />
+    <ClInclude Include="Ofinscor.h" />
+    <ClInclude Include="Ofirm.h" />
+    <ClInclude Include="Ofirma.h" />
+    <ClInclude Include="Ofirmid.h" />
+    <ClInclude Include="Ofirmres.h" />
+    <ClInclude Include="Ofont.h" />
+    <ClInclude Include="Ofphoto.h" />
+    <ClInclude Include="Ogame.h" />
+    <ClInclude Include="Ogameset.h" />
+    <ClInclude Include="Ogamestr.h" />
+    <ClInclude Include="Ogcompon.h" />
+    <ClInclude Include="Oget.h" />
+    <ClInclude Include="Ogeta.h" />
+    <ClInclude Include="Ogfile.h" />
+    <ClInclude Include="OGrpAre2.h" />
+    <ClInclude Include="OGrpArea.h" />
+    <ClInclude Include="ogrpdmth.h" />
+    <ClInclude Include="ogrpdyr.h" />
+    <ClInclude Include="Ogrph_pm.h" />
+    <ClInclude Include="Ogrph_pt.h" />
+    <ClInclude Include="Ogrph_py.h" />
+    <ClInclude Include="ogrphmth.h" />
+    <ClInclude Include="ogrphtri.h" />
+    <ClInclude Include="ogrphyr.h" />
+    <ClInclude Include="ogrpnfm.h" />
+    <ClInclude Include="ogrpnft.h" />
+    <ClInclude Include="ogrpnfyr.h" />
+    <ClInclude Include="Ogrpsmth.h" />
+    <ClInclude Include="Ogrpstri.h" />
+    <ClInclude Include="Ogrpsyr.h" />
+    <ClInclude Include="Ogset.h" />
+    <ClInclude Include="Ohelp.h" />
+    <ClInclude Include="Ohelpif.h" />
+    <ClInclude Include="Ohistory.h" />
+    <ClInclude Include="Oiface.h" />
+    <ClInclude Include="Oimgres.h" />
+    <ClInclude Include="Oinfo.h" />
+    <ClInclude Include="Oinvest.h" />
+    <ClInclude Include="Oletter.h" />
+    <ClInclude Include="OLgText.h" />
+    <ClInclude Include="Olibtech.h" />
+    <ClInclude Include="Oloc.h" />
+    <ClInclude Include="Olog.h" />
+    <ClInclude Include="Olosegam.h" />
+    <ClInclude Include="Omath.h" />
+    <ClInclude Include="Omatrix.h" />
+    <ClInclude Include="Omisc.h" />
+    <ClInclude Include="Omiscrep.h" />
+    <ClInclude Include="Omorerpt.h" />
+    <ClInclude Include="Omouse.h" />
+    <ClInclude Include="Omouse2.h" />
+    <ClInclude Include="Omousecr.h" />
+    <ClInclude Include="Omusic.h" />
+    <ClInclude Include="Onameres.h" />
+    <ClInclude Include="Onews.h" />
+    <ClInclude Include="Ooffice.h" />
+    <ClInclude Include="Oopt.h" />
+    <ClInclude Include="Oopt1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Oopt2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Oopt3.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Opeersch.h" />
+    <ClInclude Include="Opiechrt.h" />
+    <ClInclude Include="Oplant.h" />
+    <ClInclude Include="Opower.h" />
+    <ClInclude Include="oprint.h" />
+    <ClInclude Include="Oprtmenu.h" />
+    <ClInclude Include="Opschool.h" />
+    <ClInclude Include="Opull.h" />
+    <ClInclude Include="Oradio.h" />
+    <ClInclude Include="OradioV.h" />
+    <ClInclude Include="Orect.h" />
+    <ClInclude Include="Ores.h" />
+    <ClInclude Include="Oresdb.h" />
+    <ClInclude Include="Orestxt.h" />
+    <ClInclude Include="Oresx.h" />
+    <ClInclude Include="Oretire.h" />
+    <ClInclude Include="Oroad.h" />
+    <ClInclude Include="Oscen_if.h" />
+    <ClInclude Include="Oschlex.h" />
+    <ClInclude Include="Oschlrec.h" />
+    <ClInclude Include="Oschlres.h" />
+    <ClInclude Include="Oschool.h" />
+    <ClInclude Include="Oschrec2.h" />
+    <ClInclude Include="Oscroll.h" />
+    <ClInclude Include="Ose.h" />
+    <ClInclude Include="Oseres.h" />
+    <ClInclude Include="Osfrmres.h" />
+    <ClInclude Include="Oslider.h" />
+    <ClInclude Include="Ospinner.h" />
+    <ClInclude Include="Osprite.h" />
+    <ClInclude Include="Ospritea.h" />
+    <ClInclude Include="Osprtres.h" />
+    <ClInclude Include="Ostr.h" />
+    <ClInclude Include="Ostudent.h" />
+    <ClInclude Include="Ostuoff.h" />
+    <ClInclude Include="Osys.h" />
+    <ClInclude Include="Otabmenu.h" />
+    <ClInclude Include="Otask.h" />
+    <ClInclude Include="Oterrain.h" />
+    <ClInclude Include="Otest.h" />
+    <ClInclude Include="OText.h" />
+    <ClInclude Include="Otilegrp.h" />
+    <ClInclude Include="Otransl.h" />
+    <ClInclude Include="Otxtbox.h" />
+    <ClInclude Include="Otxtlist.h" />
+    <ClInclude Include="Ovalsldr.h" />
+    <ClInclude Include="Ovbrow98.h" />
+    <ClInclude Include="Ovbrowif.h" />
+    <ClInclude Include="Ovbrowse.h" />
+    <ClInclude Include="Ovga.h" />
+    <ClInclude Include="Ovgabuf.h" />
+    <ClInclude Include="Ovgalock.h" />
+    <ClInclude Include="Ovideo.h" />
+    <ClInclude Include="Ovolume.h" />
+    <ClInclude Include="Ovqueue.h" />
+    <ClInclude Include="Oworld.h" />
+    <ClInclude Include="Oworldmt.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Zset.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="CC.ico" />
+    <Image Include="Cu.ico" />
+    <Image Include="icon2.ico" />
+    <Image Include="icon3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Cu.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cursor2.cur" />
+    <CustomBuild Include="cursor3.cur" />
+    <CustomBuild Include="cursor4.cur" />
+    <CustomBuild Include="cursor5.cur" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

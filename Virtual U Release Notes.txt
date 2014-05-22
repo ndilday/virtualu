@@ -1,0 +1,61 @@
+Virtual U: Post-Release Known Issues List (4/9/02)
+
+1. Blackouts on the screen in Win2000 and WinXP
+
+If you experience any blacking out or uneccessary screen flicker when
+using VU on Windows 2000 or XP then do the following:
+
+	A. 	Quit VU and open up the folder VU is stored in
+		This is most like c:\program files\virtual u
+
+	B.	Locate the cc.exe program and run that.
+
+CC.exe is the debug executable for Virtual U and contains some additional
+error trapping code that will improve the video performance on Windows
+2000 and Windows XP.
+
+2. Game asks you for CD
+The game we have provided is sometimes asking users for the CD a
+holdover from the music included in our previous boxed version - you may
+hit continue if you are given this message and the game runs normally.
+We are working to disable this feature permanently in version 2.01
+
+3. Hiring too many full professors
+Our model is currently hiring too many full professors we are balancing
+it out for Version 2.01 soon to improve the realistic behavior of our
+hiring algorithm.
+
+4. Indirect cost rate doesn't track prior year's budget figures as
+closely as we want
+Virtual is supposed to set an upper end limit to the indirect cost rate
+and is doing so but not as closely as we want. We are fixing this for
+version 2.01
+
+5. Administrative and Staff Morales are slightly off-base
+We recently discovered that administrative and staff morales are a bit
+too low. We are fixing that issue in version 2.01.
+
+6. Research is not hurt when there is a space shortfall
+We will be adding a new rule soon that research funding will be affected
+greatly by space shortfalls. Enjoy for now the fact that space
+shortfalls will not obstruct research success.
+
+7. Bias in faculty hiring toward low-numbered departments
+When hiring new faculty and not dictating where hires go there is a bias
+toward the computer hiring automatically into smaller sized departments.
+We are fixing this in version 2.01
+
+8. Initialization produces too much Financial aid
+Our financial aide algorithm is setting financial aid to about 50% of
+gross tuition. This is high on average (very high) and we are going to
+reduce it to about 20-25% of gross tuition in version 2.01
+
+9. Courses
+Our course algorithms that determine how many students are taking
+courses, how they are benefiting from class sizes, etc. are still a work
+in progress. We expect to have an improved version in 2.01 and in 2.1
+
+10. Faculty hiring sliders not working
+In some cases with our first 2.0 build faculty hiring sliders were not
+working correctly. Please download our 2.0a patch to fix this. If you
+have downloaded after 9am on 4/3 you already have this fixed.

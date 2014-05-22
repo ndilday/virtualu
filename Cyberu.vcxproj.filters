@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="asm">
+      <UniqueIdentifier>{bf52fd85-c8f4-4700-ae74-a2642b3e9704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="matrix.src">
+      <UniqueIdentifier>{97f53774-3712-48b5-90bc-3302547e1afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h">
+      <UniqueIdentifier>{00ba58f9-f887-43f4-876b-05da92fea7da}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="asm\crc.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\I_BAR.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\I_BRIGHT.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\I_CTRL.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\I_EFFECT.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\i_line.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\i_read.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_a.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_ar.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\Ib_arm.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_at.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_atr.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_atrd.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_atrdm.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\Ib_atrm.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_r.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\Ib_rm.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_t.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_tr.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_trd.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ib_trdm.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\Ib_trm.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\ic.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="asm\Ij_tr.obj">
+      <Filter>asm</Filter>
+    </Object>
+    <Object Include="Asm\IP_TD.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="matrix.src\Bandmat.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Cholesky.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Evalue.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Hholder.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Jacobi.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Myexcept.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat1.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat2.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat3.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat4.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat5.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat6.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat7.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat8.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmat9.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmatex.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmatnl.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Newmatrm.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\OLinAlg.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Solution.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Sort.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Submat.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.src\Svd.cpp">
+      <Filter>matrix.src</Filter>
+    </ClCompile>
+    <ClCompile Include="Cc.cpp" />
+    <ClCompile Include="oadm_off.cpp" />
+    <ClCompile Include="Oathl_if.cpp" />
+    <ClCompile Include="Oathl_st.cpp" />
+    <ClCompile Include="Oaudio.cpp" />
+    <ClCompile Include="Obankrup.cpp" />
+    <ClCompile Include="Obar.cpp" />
+    <ClCompile Include="Obattle.cpp" />
+    <ClCompile Include="Obitmap.cpp" />
+    <ClCompile Include="Obitmapw.cpp" />
+    <ClCompile Include="Oblckbrd.cpp" />
+    <ClCompile Include="Oblob2.cpp" />
+    <ClCompile Include="Oblob2w.cpp" />
+    <ClCompile Include="Obndsldr.cpp" />
+    <ClCompile Include="Obox.cpp" />
+    <ClCompile Include="Obutton.cpp" />
+    <ClCompile Include="Ochance.cpp" />
+    <ClCompile Include="Ocoltbl.cpp" />
+    <ClCompile Include="Ocombuf.cpp" />
+    <ClCompile Include="Oconfig.cpp" />
+    <ClCompile Include="Ocour_if.cpp" />
+    <ClCompile Include="Ocourres.cpp" />
+    <ClCompile Include="Ocourse.cpp" />
+    <ClCompile Include="Ocoursea.cpp" />
+    <ClCompile Include="Ocrime.cpp" />
+    <ClCompile Include="Odate.cpp" />
+    <ClCompile Include="Odb.cpp" />
+    <ClCompile Include="Odebugx.cpp" />
+    <ClCompile Include="Odeftile.cpp" />
+    <ClCompile Include="Odepa_hi.cpp" />
+    <ClCompile Include="Odepa_pi.cpp" />
+    <ClCompile Include="Odept.cpp" />
+    <ClCompile Include="odept_gf.cpp" />
+    <ClCompile Include="Odept_if.cpp" />
+    <ClCompile Include="Odept_pi.cpp" />
+    <ClCompile Include="Odepta.cpp" />
+    <ClCompile Include="Odeptgen.cpp" />
+    <ClCompile Include="Odeptlst.cpp" />
+    <ClCompile Include="Odeptres.cpp" />
+    <ClCompile Include="Odeve_if.cpp" />
+    <ClCompile Include="odeve_st.cpp" />
+    <ClCompile Include="Odir.cpp" />
+    <ClCompile Include="Odynarr.cpp" />
+    <ClCompile Include="Odynarrb.cpp" />
+    <ClCompile Include="Oenro_st.cpp" />
+    <ClCompile Include="Oenroll.cpp" />
+    <ClCompile Include="Oenrolsl.cpp" />
+    <ClCompile Include="Oerror.cpp" />
+    <ClCompile Include="Ofac_rep.cpp" />
+    <ClCompile Include="Ofac_rs.cpp" />
+    <ClCompile Include="ofac_sum.cpp" />
+    <ClCompile Include="Ofaci_if.cpp" />
+    <ClCompile Include="ofaci_st.cpp" />
+    <ClCompile Include="Ofacu_pi.cpp" />
+    <ClCompile Include="Ofaculta.cpp" />
+    <ClCompile Include="OFaculty.cpp" />
+    <ClCompile Include="Ofacures.cpp" />
+    <ClCompile Include="Ofield.cpp" />
+    <ClCompile Include="Ofile.cpp" />
+    <ClCompile Include="Ofiletxt.cpp" />
+    <ClCompile Include="Ofin_day.cpp" />
+    <ClCompile Include="Ofin_new.cpp" />
+    <ClCompile Include="Ofin_rep.cpp" />
+    <ClCompile Include="Ofin_s3.cpp" />
+    <ClCompile Include="Ofinance.cpp" />
+    <ClCompile Include="Ofinscor.cpp" />
+    <ClCompile Include="OFirm.cpp" />
+    <ClCompile Include="OFirmA.cpp" />
+    <ClCompile Include="Ofirmdrw.cpp" />
+    <ClCompile Include="OFirmRes.cpp" />
+    <ClCompile Include="Ofont.cpp" />
+    <ClCompile Include="Ofphoto.cpp" />
+    <ClCompile Include="Ogam_if1.cpp" />
+    <ClCompile Include="Ogam_if2.cpp" />
+    <ClCompile Include="Ogame.cpp" />
+    <ClCompile Include="OgameOpt.cpp" />
+    <ClCompile Include="Ogameset.cpp" />
+    <ClCompile Include="Ogamestr.cpp" />
+    <ClCompile Include="Ogamhall.cpp" />
+    <ClCompile Include="Ogammain.cpp" />
+    <ClCompile Include="Ogcompon.cpp" />
+    <ClCompile Include="ogconfig.cpp" />
+    <ClCompile Include="Oget.cpp" />
+    <ClCompile Include="Ogeta.cpp" />
+    <ClCompile Include="Ogfile.cpp" />
+    <ClCompile Include="Ogfile2.cpp" />
+    <ClCompile Include="Ogfile3.cpp" />
+    <ClCompile Include="Ogfile4.cpp" />
+    <ClCompile Include="ogfile5.cpp" />
+    <ClCompile Include="Ogfilea.cpp" />
+    <ClCompile Include="OGrpAre2.cpp" />
+    <ClCompile Include="OGrpArea.cpp" />
+    <ClCompile Include="Ogrpdmth.cpp" />
+    <ClCompile Include="Ogrpdyr.cpp" />
+    <ClCompile Include="Ogrph_pm.cpp" />
+    <ClCompile Include="Ogrph_pt.cpp" />
+    <ClCompile Include="Ogrph_py.cpp" />
+    <ClCompile Include="Ogrphmth.cpp" />
+    <ClCompile Include="Ogrphtri.cpp" />
+    <ClCompile Include="Ogrphyr.cpp" />
+    <ClCompile Include="Ogrpnfm.cpp" />
+    <ClCompile Include="Ogrpnft.cpp" />
+    <ClCompile Include="Ogrpnfyr.cpp" />
+    <ClCompile Include="Ogset_if.cpp" />
+    <ClCompile Include="Ohelp.cpp" />
+    <ClCompile Include="Ohelp_if.cpp" />
+    <ClCompile Include="Oiface.cpp" />
+    <ClCompile Include="Oimgres.cpp" />
+    <ClCompile Include="Oinfo.cpp" />
+    <ClCompile Include="Oinfo2.cpp" />
+    <ClCompile Include="Oinve_if.cpp" />
+    <ClCompile Include="Oinve_st.cpp" />
+    <ClCompile Include="Oletter.cpp" />
+    <ClCompile Include="OLgText.cpp" />
+    <ClCompile Include="olib_st.cpp" />
+    <ClCompile Include="Olibt_if.cpp" />
+    <ClCompile Include="Olog.cpp" />
+    <ClCompile Include="Olosegam.cpp" />
+    <ClCompile Include="Omath.cpp" />
+    <ClCompile Include="Omatrix.cpp" />
+    <ClCompile Include="Omem.cpp" />
+    <ClCompile Include="Omisc.cpp" />
+    <ClCompile Include="Omiscrep.cpp" />
+    <ClCompile Include="Omorerpt.cpp" />
+    <ClCompile Include="Omouse.cpp" />
+    <ClCompile Include="Omousecr.cpp" />
+    <ClCompile Include="Omusic.cpp" />
+    <ClCompile Include="Onameres.cpp" />
+    <ClCompile Include="Onews.cpp" />
+    <ClCompile Include="Onewsadd.cpp" />
+    <ClCompile Include="Onewsmsg.cpp" />
+    <ClCompile Include="oopt.cpp" />
+    <ClCompile Include="Oopt1.cpp" />
+    <ClCompile Include="Oopt2.cpp" />
+    <ClCompile Include="Oopt3.cpp" />
+    <ClCompile Include="Oparking.cpp" />
+    <ClCompile Include="Opeersch.cpp" />
+    <ClCompile Include="Opiechrt.cpp" />
+    <ClCompile Include="Oplant.cpp" />
+    <ClCompile Include="Opower.cpp" />
+    <ClCompile Include="Oprint.cpp" />
+    <ClCompile Include="Oprtmen1.cpp" />
+    <ClCompile Include="Oprtmen2.cpp" />
+    <ClCompile Include="Oprtmen3.cpp" />
+    <ClCompile Include="Oprtmen4.cpp" />
+    <ClCompile Include="Oprtmen5.cpp" />
+    <ClCompile Include="Oprtmen6.cpp" />
+    <ClCompile Include="Oprtmen7.cpp" />
+    <ClCompile Include="Oprtmenu.cpp" />
+    <ClCompile Include="Opsch_gs.cpp" />
+    <ClCompile Include="Opsch_pi.cpp" />
+    <ClCompile Include="opsch_po.cpp" />
+    <ClCompile Include="Opsch_sc.cpp" />
+    <ClCompile Include="Opschool.cpp" />
+    <ClCompile Include="Opull.cpp" />
+    <ClCompile Include="oquadprg.cpp" />
+    <ClCompile Include="Oradio.cpp" />
+    <ClCompile Include="OradioV.cpp" />
+    <ClCompile Include="ORect.cpp" />
+    <ClCompile Include="ores.cpp" />
+    <ClCompile Include="Oresdb.cpp" />
+    <ClCompile Include="Orestxt.cpp" />
+    <ClCompile Include="Oresx.cpp" />
+    <ClCompile Include="Oretire.cpp" />
+    <ClCompile Include="Oroad.cpp" />
+    <ClCompile Include="Oscen_if.cpp" />
+    <ClCompile Include="Oschlex.cpp" />
+    <ClCompile Include="Oschlres.cpp" />
+    <ClCompile Include="Oschool.cpp" />
+    <ClCompile Include="Oscor_if.cpp" />
+    <ClCompile Include="Oscroll.cpp" />
+    <ClCompile Include="Ose.cpp" />
+    <ClCompile Include="Oseres.cpp" />
+    <ClCompile Include="Osfrmres.cpp" />
+    <ClCompile Include="Oslider.cpp" />
+    <ClCompile Include="Ospinner.cpp" />
+    <ClCompile Include="Osprite.cpp" />
+    <ClCompile Include="Ospritea.cpp" />
+    <ClCompile Include="Osprtres.cpp" />
+    <ClCompile Include="ostd_sum.cpp" />
+    <ClCompile Include="Ostr.cpp" />
+    <ClCompile Include="Ostud_pi.cpp" />
+    <ClCompile Include="Ostud_sc.cpp" />
+    <ClCompile Include="Ostudena.cpp" />
+    <ClCompile Include="OStudent.cpp" />
+    <ClCompile Include="Ostuo_st.cpp" />
+    <ClCompile Include="Osysdet.cpp" />
+    <ClCompile Include="Osysdisp.cpp" />
+    <ClCompile Include="Osysinit.cpp" />
+    <ClCompile Include="Osysmess.cpp" />
+    <ClCompile Include="Osysproc.cpp" />
+    <ClCompile Include="Otabmenu.cpp" />
+    <ClCompile Include="Otask.cpp" />
+    <ClCompile Include="Otaskadd.cpp" />
+    <ClCompile Include="Otaskend.cpp" />
+    <ClCompile Include="Otaskmsg.cpp" />
+    <ClCompile Include="Oterrain.cpp" />
+    <ClCompile Include="OText.cpp" />
+    <ClCompile Include="Otransl.cpp" />
+    <ClCompile Include="Otxtbox.cpp" />
+    <ClCompile Include="Otxtlist.cpp" />
+    <ClCompile Include="Ovalsldr.cpp" />
+    <ClCompile Include="Ovbrow98.cpp" />
+    <ClCompile Include="Ovbrowse.cpp" />
+    <ClCompile Include="Ovga.cpp" />
+    <ClCompile Include="Ovgabuf.cpp" />
+    <ClCompile Include="Ovgabuf2.cpp" />
+    <ClCompile Include="Ovgalock.cpp" />
+    <ClCompile Include="Ovideo.cpp" />
+    <ClCompile Include="Ovolume.cpp" />
+    <ClCompile Include="Ovqueue.cpp" />
+    <ClCompile Include="Oworld.cpp" />
+    <ClCompile Include="Oworld_m.cpp" />
+    <ClCompile Include="Oworld_z.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="matrix.src\Controlw.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Include.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Myexcept.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Newmat.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Newmatap.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Newmatio.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Newmatnl.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Newmatrc.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Newmatrm.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\OLinAlg.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\ONewmat.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Precisio.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.src\Solution.h">
+      <Filter>matrix.src</Filter>
+    </ClInclude>
+    <ClInclude Include="All.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Colcode.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Cu.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamedef.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Imgfun.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="oadm_off.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oathleti.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oaudio.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obankrup.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obar.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obattle.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obitmap.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obitmapw.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oblckbrd.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oblob2.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oblob2w.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obndsldr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obox.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Obutton.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ochance.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ocoltbl.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ocombuf.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oconfig.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ocourres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ocourse.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odate.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odb.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odebugx.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odeftile.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odept.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odeptgen.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odeptlst.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odeptres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odevelop.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odir.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odynarr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Odynarrb.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oenroll.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofacilit.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofaculty.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofacures.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofield.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofile.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofiletxt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofinanc2.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofinance.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofinscor.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofirm.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofirma.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofirmid.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofirmres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofont.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ofphoto.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogame.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogameset.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogamestr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogcompon.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oget.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogeta.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogfile.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OGrpAre2.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OGrpArea.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrpdmth.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrpdyr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrph_pm.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrph_pt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrph_py.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrphmth.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrphtri.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrphyr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrpnfm.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrpnft.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ogrpnfyr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrpsmth.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrpstri.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrpsyr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogset.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ohelp.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ohelpif.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ohistory.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oiface.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oimgres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oinfo.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oinvest.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oletter.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OLgText.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Olibtech.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oloc.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Olog.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Olosegam.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omath.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omatrix.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omisc.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omiscrep.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omorerpt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omouse.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omouse2.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omousecr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Omusic.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Onameres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Onews.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ooffice.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oopt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oopt1.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oopt2.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oopt3.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Opeersch.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Opiechrt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oplant.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Opower.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="oprint.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oprtmenu.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Opschool.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Opull.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oradio.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OradioV.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Orect.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ores.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oresdb.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Orestxt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oresx.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oretire.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oroad.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oscen_if.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oschlex.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oschlrec.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oschlres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oschool.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oschrec2.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oscroll.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ose.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oseres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Osfrmres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oslider.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ospinner.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Osprite.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ospritea.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Osprtres.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ostr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ostudent.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ostuoff.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Osys.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otabmenu.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otask.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oterrain.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otest.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OText.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otilegrp.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otransl.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otxtbox.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Otxtlist.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovalsldr.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovbrow98.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovbrowif.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovbrowse.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovga.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovgabuf.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovgalock.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovideo.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovolume.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ovqueue.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oworld.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Oworldmt.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Zset.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="CC.ico" />
+    <Image Include="Cu.ico" />
+    <Image Include="icon2.ico" />
+    <Image Include="icon3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Cu.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cursor2.cur" />
+    <CustomBuild Include="cursor3.cur" />
+    <CustomBuild Include="cursor4.cur" />
+    <CustomBuild Include="cursor5.cur" />
+  </ItemGroup>
+</Project>
