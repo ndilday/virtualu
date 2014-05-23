@@ -495,10 +495,6 @@ void News::scenario_near_end() {
 void News::open_game_near_end() {
     str = "This is a demo of the custom game and it will end at the end of the upcoming year.";
 
-#ifdef DEMO
-    str = "This demo game will end at the end of the upcoming year.";
-#endif
-
 #ifdef ADMIN
     str = "The simulation will complete at the end of the upcoming year.";
 #endif
@@ -510,10 +506,6 @@ void News::open_game_near_end() {
 //!
 void News::open_game_end() {
     str = "This is a demo of the custom game and it has reached its time limit. Please consider buying the Administrator version for fully functional custom games.";
-
-#ifdef DEMO
-    str = "This demo game has reached its time limit. Please consider buying the full version to extend play.";
-#endif
 
 #ifdef ADMIN
     str = "You have reached the end of the simulation. Congratulations.";

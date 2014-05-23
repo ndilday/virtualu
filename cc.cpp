@@ -249,11 +249,6 @@ static void extra_error_handler();
 static int is_math_exception( DWORD, _EXCEPTION_POINTERS * );
 static void play_video(HINSTANCE hInstance, int videoId);
 
-#ifdef DEMO
-static void demo_screen();
-static void open_http(char* shortcutFilename, char* httpAddr);
-#endif
-
 //---------- Begin of function WinMain ----------//
 //!
 //! WinMain - initialization, message loop
@@ -324,15 +319,7 @@ int PASCAL WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
     }
 #endif                                          // DEBUG
 
-#ifdef DEMO
-    audio.play_wav("DEMOOPEN",audio.int_to_DsVolume(config.sound_effect_volume));
-#endif
-
     game.main_menu();
-
-#ifdef DEMO
-    demo_screen();
-#endif
 
     sys.deinit();
 
@@ -411,171 +398,6 @@ static void play_video(HINSTANCE hInstance, int videoId) {
 }
 
 //--------- End of function play_video --------------//
-
-#ifdef DEMO
-
-//------- define struct DemoButton --------//
-
-#define DEMO_BUTTON_COUNT 3
-
-enum {
-    BUTTON_WIDTH  = 201,
-    BUTTON_HEIGHT = 37
-};
-
-//!Structure for holding demo screen information (coordinates, size, and
-//!bitmap file)
-struct DemoButton {
-    short x1;
-    short y1;
-    short width;
-    short height;
-    char* file_name;
-};
-
-//----------- define static vars ---------//
-
-static DemoButton demo_button_array[] = {
-    { 83 , 508, 186, 65, "DEMOSCR1" },
-    { 339, 508, 183, 64, "DEMOSCR2" },
-    { 622, 508, 80, 65, "DEMOSCR3" },
-};
-
-//--------- Begin of function demo_screen -----------//
-
-static void demo_screen() {
-    //------- display screen -----------//
-
-    int dataSize;
-    File* filePtr = image_interface.get_file("DEMOSCR", dataSize);
-
-    if (filePtr->file_get_short() != -1 ) {         // use common color palette
-	filePtr->file_seek(filePtr->file_pos() - sizeof(short));
-	vga_back.put_large_bitmap(0, 0, filePtr);
-    }
-    else {                                          // use own color palette
-	unsigned char palette[256 * 3];
-	short *remapTable;
-	filePtr->file_read(palette, 256 * 3);
-	PalDesc palDesc(palette, 3, 256, 6);
-	ColorTable colorTable;
-	colorTable.generate_table_fast(MAX_BRIGHTNESS_ADJUST_DEGREE, palDesc, ColorTable::bright_func);
-	remapTable = (short *) colorTable.get_table(0);
-	vga_back.put_large_bitmap(0, 0, filePtr, remapTable);
-    }
-
-    vga.blt_buf(0,0,VGA_WIDTH-1,VGA_HEIGHT-1);
-    sys.blt_virtual_buf();
-
-    //-------- detect button --------//
-
-    int highlightButton=0;
-
-    while(1) {
-	MSG msg;
-
-	if (PeekMessage( &msg, NULL, 0, 0, PM_NOREMOVE)) {
-	    if (!GetMessage( &msg, NULL, 0, 0)) {
-		return;
-	    }
-
-	    TranslateMessage(&msg);
-	    DispatchMessage(&msg);
-	    continue;
-	}
-	else if( sys.paused_flag || !sys.active_flag ) {
-	    WaitMessage();
-	    continue;
-	}
-
-	//---------- detect menu option buttons -----------//
-
-	sys.yield();
-	mouse.get_event();
-
-	DemoButton* buttonPtr = demo_button_array;
-
-	for( int i=0 ; i<DEMO_BUTTON_COUNT ; i++, buttonPtr++ ) {
-	    //----- has clicked on a button -------//
-
-	    if(  mouse.single_click( buttonPtr->x1, buttonPtr->y1,
-				     buttonPtr->x1+buttonPtr->width-1, buttonPtr->y1+buttonPtr->height-1, 0 ) ) {
-		audio.play_wav("BEEPS-1",audio.int_to_DsVolume(config.sound_effect_volume));
-
-		switch(i) {
-		case 0:
-		    open_http( "anker.url", "http://www.ankerpub.com" );
-		    return;
-
-		case 1:
-		    open_http( "vu.url", "http://www.virtual-u.org" );
-		    return;
-
-		case 2:
-		    return;
-		}
-	    }
-
-	    //---- if the mouse cursor is in the area ----//
-
-	    if(  mouse.in_area( buttonPtr->x1, buttonPtr->y1,
-				buttonPtr->x1+buttonPtr->width-1, buttonPtr->y1+buttonPtr->height-1 ) ) {
-		if( highlightButton != i+1 ) {
-		    highlightButton = i+1;
-
-		    // restore original image first
-		    vga.blt_buf(0,0,VGA_WIDTH-1,VGA_HEIGHT-1);
-
-		    mouse.hide_area(buttonPtr->x1, buttonPtr->y1,
-				    buttonPtr->x1+buttonPtr->width-1,  buttonPtr->y1+buttonPtr->height-1);
-
-		    image_interface.put_front( buttonPtr->x1, buttonPtr->y1, buttonPtr->file_name );
-
-		    mouse.show_area();
-
-		    sys.blt_virtual_buf();
-		}
-		break;
-	    }
-	}
-
-	//------- the mouse cursor is not on any of the buttons ------//
-
-	if( i==DEMO_BUTTON_COUNT ) {
-	    if( highlightButton != 0 ) {
-		vga.blt_buf(0,0,VGA_WIDTH-1,VGA_HEIGHT-1);// restore original image
-		highlightButton = 0;
-	    }
-	}
-    }
-}
-
-//--------- End of function demo_screen -----------//
-
-//--------- Begin of function open_http -----------//
-
-static void open_http(char* shortcutFilename, char* httpAddr) {
-    if( !m.is_file_exist(shortcutFilename) ) {
-	// create 7k2home.url file
-
-	String str = "[InternetShortcut]\r\nURL=";
-	str += httpAddr;
-	str += "\r\n";
-
-	File urlFile;
-	urlFile.file_create(shortcutFilename);
-	urlFile.file_write( str, strlen(str) );
-	urlFile.file_close();
-    }
-
-    if( m.is_file_exist(shortcutFilename) ) {
-	sys.deinit();
-	HINSTANCE hinst = ShellExecute( sys.main_hwnd, "open", shortcutFilename, NULL, "", SW_SHOWNORMAL );
-    }
-}
-
-//--------- End of function open_http -----------//
-#endif
 
 // value from GetExceptionCode()
 static int is_math_exception( DWORD exceptionCode, _EXCEPTION_POINTERS *exceptInfo ) {

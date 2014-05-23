@@ -110,10 +110,6 @@ void Game::main_menu() {
 	    int dataSize;
 	    char* bmpName = "MENU-STD";
 
-#ifdef DEMO
-	    bmpName = "MENUDEMO";
-#endif
-
 #ifdef ADMIN
 	    bmpName = "MENU-ADM";
 #endif

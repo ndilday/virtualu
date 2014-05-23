@@ -298,10 +298,6 @@ int Sys::restore() {
 
 	char* bmpName = "MENU-STD";
 
-#ifdef DEMO
-	bmpName = "MENUDEMO";
-#endif
-
 #ifdef ADMIN
 	bmpName = "MENU-ADM";
 #endif

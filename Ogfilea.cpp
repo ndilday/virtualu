@@ -33,10 +33,6 @@ static int     sort_game_file_function( const void *a, const void *b );
 GameFileArray::GameFileArray() : DynArray( sizeof(GameFile), 10 ) {
     demo_format = 0;
 
-#ifdef DEMO
-    demo_format = 1;
-#endif
-
 #ifdef DEMO_DESIGN
     demo_format = 1;
 #endif

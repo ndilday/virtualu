@@ -3,16 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cyberu", "Cyberu.vcxproj", "{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtualu", "phase1\virtualu\virtualu.csproj", "{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Debug|Mixed Platforms.Build.0 = Debug|Win32
 		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Debug|Win32.ActiveCfg = Debug|Win32
 		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Debug|Win32.Build.0 = Debug|Win32
+		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Release|Any CPU.ActiveCfg = Release|Win32
+		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Release|Win32.ActiveCfg = Release|Win32
 		{26BB2C48-CA4C-4357-AACC-4F5F74EB6B6D}.Release|Win32.Build.0 = Release|Win32
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8DD5C01C-AAA7-4267-817A-10E7E0FFDC94}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -486,26 +486,11 @@ void Sys::set_game_dir() {
     set_one_dir( "IMAGE\\HALLFAME.ICN"    , "IMAGE\\", dir_image );
     set_one_dir( "ENCYC\\SEAT\\NORMAN.ICN", "ENCYC\\", dir_encyc );
     set_one_dir( "MOVIE\\INTRO.AVI"       , "MOVIE\\", dir_movie );
-
-#ifdef DEMO
-    set_one_dir( "TUTORIAL\\STANDARD.TUT" , "TUTORIAL\\", dir_tutorial );
-    set_one_dir( "SCENARIO\\DEMO.SCN"     , "SCENARIO\\", dir_scenario );
-#else
     set_one_dir( "TUTORIAL\\1BAS_MIL.TUT" , "TUTORIAL\\", dir_tutorial );
     set_one_dir( "SCENARIO\\7FOR7.SCN"    , "SCENARIO\\", dir_scenario );
-#endif
 
     //-------- set game version ---------//
-
-#ifdef BETA
-    game_version = VERSION_FULL;
-#else
-#ifdef DEMO
-    game_version = VERSION_DEMO;
-#else
     game_version = VERSION_FULL;                    // single player game is not available when game_version == VERSION_FULL
-#endif
-#endif
 }
 
 //----------- End of function Sys::set_game_dir ----------//

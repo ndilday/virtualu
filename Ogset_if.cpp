@@ -1827,12 +1827,6 @@ void GameSetting::play_scenario_report(int refreshFlag) {
 	    old_scn_id=scn_id[scenario_vbrowser.recno() - 1];
 
 	    //--- Demo: only the first scenario is available in the demo ---//
-
-#ifdef DEMO
-	    if( scenario_vbrowser.recno() > 1 )
-		font_chart_red_sm.right_put( tab4-20, vtab3+25, "Not available in the demo version" );
-#endif
-
 	    vga.blt_buf(0,0,VGA_WIDTH-1,VGA_HEIGHT-1);
 	}
     }
@@ -1920,16 +1914,6 @@ int GameSetting::play_scenario_detect() {
     }
     else {
 	vga.use_front();
-
-	if(scenario_vbrowser.detect()) {
-#ifdef DEMO
-	    if( scenario_vbrowser.recno() > 1 )
-		scr_button_start.disable();
-	    else
-		scr_button_start.enable();
-	    return 0;
-#endif
-	}
 
 	if( scr_button_start.detect() ) {
 	    player_school.scenario_id=scn_id[scenario_vbrowser.recno() - 1];
