@@ -451,8 +451,6 @@ void EnrollRes::load_db_student_talent() {
 //!
 void EnrollRes::update_income() {
     // adjust this var: Talent talent_array[STUDENT_SUBSEGMENT_COUNT][STUDENT_SEGMENT_COUNT][TALENT_INCOME_VAR_COUNT];
-    //
-
     int subSeg, seg;
     float inflationRate = (float) finance.inflation_rate / 100.0f;
 
